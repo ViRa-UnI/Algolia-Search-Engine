@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_index_user,product.index user,model_product_index,,1,0,0,0
+access_product_index_manager,product.index manager,model_product_index,group_algolia_search_manager,1,1,1,1
+access_search_analytics_user,search.analytics user,model_search_analytics,,1,0,0,0
+access_search_analytics_manager,search.analytics manager,model_search_analytics,group_algolia_search_manager,1,1,1,1

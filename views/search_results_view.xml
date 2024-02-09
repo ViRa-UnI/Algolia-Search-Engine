@@ -1,0 +1,71 @@
+<odoo>
+    <data>
+
+        <!-- Search Results View -->
+        <record id="search_results_view_id" model="ir.ui.view">
+            <field name="name">product.index.search.results</field>
+            <field name="model">product.index</field>
+            <field name="arch" type="xml">
+                <template id="algolia_search_results_template">
+                    <div class="o_algolia_search_results">
+                        <t t-foreach="search_results" t-as="result">
+                            <div class="o_algolia_search_result">
+                                <div class="o_algolia_search_result_image">
+                                    <img t-att-src="result.image_url" alt="Product Image"/>
+                                </div>
+                                <div class="o_algolia_search_result_info">
+                                    <h2 class="o_algolia_search_result_title">
+                                        <a t-att-href="result.product_url" t-esc="result.product_name"/>
+                                    </h2>
+                                    <div class="o_algolia_search_result_price">
+                                        <span t-esc="result.product_price" t-esc-options='{"widget": "monetary", "display_currency": "result.currency_id"}'/>
+                                    </div>
+                                    <div class="o_algolia_search_result_description">
+                                        <p t-esc="result.product_description"/>
+                                    </div>
+                                </div>
+                                <div class="o_algolia_search_result_actions">
+                                    <t t-if="result.can_add_to_cart">
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                    </t>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </template>
+            </field>
+        </record>
+
+        <!-- Search Filters and Sorting Options -->
+        <record id="search_filters_view_id" model="ir.ui.view">
+            <field name="name">product.index.search.filters</field>
+            <field name="model">product.index</field>
+            <field name="arch" type="xml">
+                <div class="o_algolia_search_filters">
+                    <div class="o_algolia_search_sorting">
+                        <label for="sorting">Sort by:</label>
+                        <select id="sorting" class="o_algolia_sorting_selector">
+                            <option value="relevance">Relevance</option>
+                            <option value="price_asc">Price: Low to High</option>
+                            <option value="price_desc">Price: High to Low</option>
+                        </select>
+                    </div>
+                    <div class="o_algolia_faceted_filters">
+                        <t t-foreach="facets" t-as="facet">
+                            <div class="o_algolia_facet">
+                                <h3 t-esc="facet.name"/>
+                                <t t-foreach="facet.values" t-as="value">
+                                    <div class="o_algolia_facet_value">
+                                        <input type="checkbox" t-att-id="value.id" t-att-value="value.id"/>
+                                        <label t-att-for="value.id" t-esc="value.name"/>
+                                    </div>
+                                </t>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </field>
+        </record>
+
+    </data>
+</odoo>
