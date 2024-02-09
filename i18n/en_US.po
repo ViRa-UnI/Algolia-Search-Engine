@@ -1,0 +1,132 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Version 16 Community Edition - Algolia Search Integration Module\n"
+"POT-Creation-Date: 2024-02-09\n"
+"PO-Revision-Date: 2024-02-09\n"
+"Last-Translator: \n"
+"Language-Team: English\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: algolia_search_integration
+#: model:product.index,field:product_name
+msgid "Product Name"
+msgstr ""
+
+#. module: algolia_search_integration
+#: model:product.index,field:product_description
+msgid "Product Description"
+msgstr ""
+
+#. module: algolia_search_integration
+#: model:product.index,field:product_category
+msgid "Product Category"
+msgstr ""
+
+#. module: algolia_search_integration
+#: model:product.index,field:product_price
+msgid "Product Price"
+msgstr ""
+
+#. module: algolia_search_integration
+#: model:search.analytics,field:search_query
+msgid "Search Query"
+msgstr ""
+
+#. module: algolia_search_integration
+#: model:search.analytics,field:user_interaction
+msgid "User Interaction"
+msgstr ""
+
+#. module: algolia_search_integration
+#: model:search.analytics,field:engagement_metric
+msgid "Engagement Metric"
+msgstr ""
+
+#. module: algolia_search_integration
+#: view:search_results_view_id
+msgid "Search Results"
+msgstr ""
+
+#. module: algolia_search_integration
+#: view:analytics_dashboard_view_id
+msgid "Analytics Dashboard"
+msgstr ""
+
+#. module: algolia_search_integration
+#: wizard:algolia_config_wizard_view_id
+msgid "Algolia Configuration Wizard"
+msgstr ""
+
+#. module: algolia_search_integration
+#: code:addons/algolia_search_integration/static/src/js/search_integration.js
+msgid "Instant Search"
+msgstr ""
+
+#. module: algolia_search_integration
+#: code:addons/algolia_search_integration/static/src/js/search_integration.js
+msgid "Faceted Search"
+msgstr ""
+
+#. module: algolia_search_integration
+#: code:addons/algolia_search_integration/static/src/js/search_integration.js
+msgid "Typo Tolerance"
+msgstr ""
+
+#. module: algolia_search_integration
+#: code:addons/algolia_search_integration/static/src/css/search_styles.css
+msgid "Search Styles"
+msgstr ""
+
+#. module: algolia_search_integration
+#: code:addons/algolia_search_integration/static/src/xml/search_templates.xml
+msgid "Search Template"
+msgstr ""
+
+#. module: algolia_search_integration
+#: code:addons/algolia_search_integration/static/description/index.html
+msgid "Module Description"
+msgstr ""
+
+#. module: algolia_search_integration
+#: code:addons/algolia_search_integration/doc/installation_guide.md
+msgid "Installation Guide"
+msgstr ""
+
+#. module: algolia_search_integration
+#: code:addons/algolia_search_integration/doc/administrator_guide.md
+msgid "Administrator Guide"
+msgstr ""
+
+#. module: algolia_search_integration
+#: code:addons/algolia_search_integration/doc/user_guide.md
+msgid "User Guide"
+msgstr ""
+
+#. module: algolia_search_integration
+#: code:addons/algolia_search_integration/tests/test_search_integration.py
+msgid "Test Instant Search"
+msgstr ""
+
+#. module: algolia_search_integration
+#: code:addons/algolia_search_integration/tests/test_search_integration.py
+msgid "Test Faceted Search"
+msgstr ""
+
+#. module: algolia_search_integration
+#: code:addons/algolia_search_integration/tests/test_search_integration.py
+msgid "Test Typo Tolerance"
+msgstr ""
+
+#. module: algolia_search_integration
+#: code:addons/algolia_search_integration/tests/test_performance.py
+msgid "Test Search Performance"
+msgstr ""
+
+#. module: algolia_search_integration
+#: code:addons/algolia_search_integration/tests/test_compatibility.py
+msgid "Test Search Compatibility"
+msgstr ""

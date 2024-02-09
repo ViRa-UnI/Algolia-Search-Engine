@@ -1,0 +1,56 @@
+<templates>
+    <t t-name="AlgoliaSearch.Results">
+        <div class="o_algolia_search_results">
+            <ul class="o_algolia_search_list">
+                <t t-foreach="searchResults" t-as="result">
+                    <li class="o_algolia_search_item">
+                        <div class="o_algolia_search_item_image">
+                            <img t-att-src="result.image_url" alt="Product Image"/>
+                        </div>
+                        <div class="o_algolia_search_item_info">
+                            <h3 class="o_algolia_search_item_title">
+                                <a t-att-href="result.product_url" t-esc="result.product_name"/>
+                            </h3>
+                            <div class="o_algolia_search_item_price" t-esc="result.product_price"/>
+                            <div class="o_algolia_search_item_description" t-esc="result.product_description"/>
+                        </div>
+                    </li>
+                </t>
+            </ul>
+        </div>
+    </t>
+
+    <t t-name="AlgoliaSearch.Pagination">
+        <div class="o_algolia_search_pagination">
+            <t t-if="pagination.total_pages > 1">
+                <ul class="pagination">
+                    <t t-foreach="pagination.pages" t-as="page">
+                        <li t-att-class="'page-item' + (page.is_current ? ' active' : '')">
+                            <a href="#" class="page-link" t-att-data-page="page.number" t-esc="page.number"/>
+                        </li>
+                    </t>
+                </ul>
+            </t>
+        </div>
+    </t>
+
+    <t t-name="AlgoliaSearch.Facets">
+        <div class="o_algolia_search_facets">
+            <t t-foreach="facets" t-as="facet">
+                <div class="o_algolia_search_facet">
+                    <h4 class="o_algolia_search_facet_title" t-esc="facet.name"/>
+                    <ul class="o_algolia_search_facet_list">
+                        <t t-foreach="facet.values" t-as="value">
+                            <li class="o_algolia_search_facet_item">
+                                <label>
+                                    <input type="checkbox" t-att-value="value.value" t-att-checked="value.is_selected ? 'checked' : null"/>
+                                    <span t-esc="value.label"/>
+                                </label>
+                            </li>
+                        </t>
+                    </ul>
+                </div>
+            </t>
+        </div>
+    </t>
+</templates>

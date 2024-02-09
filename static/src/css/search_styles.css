@@ -1,0 +1,104 @@
+/* Algolia Search Integration Styles */
+
+/* Search Input Styles */
+#searchInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Search Results Container */
+#searchResultsContainer {
+  margin-top: 20px;
+}
+
+/* Individual Search Result Item */
+.search-result-item {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.search-result-item:hover {
+  background-color: #f9f9f9;
+}
+
+/* Search Result Item Details */
+.search-result-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.search-result-description {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Faceted Search Filter Options */
+.search-filter-options {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.search-filter-options li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.search-filter-option {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.search-filter-option.active,
+.search-filter-option:hover {
+  background-color: #e0e0e0;
+}
+
+/* Analytics Dashboard Styles */
+.analytics-dashboard {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.analytics-widget {
+  margin-bottom: 20px;
+}
+
+.analytics-widget-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.analytics-widget-content {
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-result-item {
+    padding: 10px;
+  }
+
+  .search-result-title {
+    font-size: 16px;
+  }
+
+  .search-filter-options li {
+    display: block;
+    margin-bottom: 5px;
+  }
+}

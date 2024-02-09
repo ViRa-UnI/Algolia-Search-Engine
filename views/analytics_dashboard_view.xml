@@ -1,0 +1,48 @@
+<odoo>
+    <data>
+
+        <!-- Analytics Dashboard View -->
+        <record id="analytics_dashboard_view_id" model="ir.ui.view">
+            <field name="name">search.analytics.dashboard.view</field>
+            <field name="model">search.analytics</field>
+            <field name="arch" type="xml">
+                <form string="Search Analytics Dashboard">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" type="object" name="action_view_search_queries">
+                                <field string="Search Queries" name="search_query_count" widget="statinfo"/>
+                            </button>
+                            <button class="oe_stat_button" type="object" name="action_view_popular_products">
+                                <field string="Popular Products" name="popular_product_count" widget="statinfo"/>
+                            </button>
+                            <button class="oe_stat_button" type="object" name="action_view_user_interactions">
+                                <field string="User Interactions" name="user_interaction_count" widget="statinfo"/>
+                            </button>
+                        </div>
+                        <notebook>
+                            <page string="Search Queries">
+                                <field name="search_query_ids" context="{'default_search_analytics_id': active_id}" options="{'no_create': True}">
+                                    <tree>
+                                        <field name="search_query"/>
+                                        <field name="query_count"/>
+                                        <field name="last_search_date"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="User Engagement">
+                                <field name="user_interaction_ids" context="{'default_search_analytics_id': active_id}" options="{'no_create': True}">
+                                    <tree>
+                                        <field name="user_interaction"/>
+                                        <field name="interaction_count"/>
+                                        <field name="last_interaction_date"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>
